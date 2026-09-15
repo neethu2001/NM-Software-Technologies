@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,8 +14,6 @@
 
     <title>Services | NM Technologies</title>
 
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -24,20 +21,14 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-
-    <!-- Bootstrap -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet">
 
-
-    <!-- Font Awesome -->
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-
-    <!-- AOS -->
     <link
         href="https://unpkg.com/aos@2.3.4/dist/aos.css"
         rel="stylesheet">
@@ -45,1307 +36,605 @@
 
     <style>
 
-        /* ==================================================
-           ROOT
-        ================================================== */
-
         :root {
-
-            --navy: #050b16;
-            --navy-2: #081221;
-            --navy-3: #0d1829;
-
-            --blue: #1677ff;
-            --blue-dark: #075dcc;
-            --blue-light: #4da3ff;
-
-            --cyan: #36d7ff;
-
-            --purple: #7657ff;
-
-            --white: #ffffff;
-
-            --off-white: #f6f8fb;
-
-            --text: #e9eef7;
-
-            --muted: #9aa7ba;
-
-            --dark-text: #142033;
-
-            --border: rgba(255,255,255,0.10);
-
+            --navy:#050b16;
+            --navy-2:#081221;
+            --blue:#1677ff;
+            --blue-light:#4da3ff;
+            --cyan:#36d7ff;
+            --off-white:#f6f8fb;
+            --text:#e9eef7;
+            --muted:#9aa7ba;
+            --dark-text:#142033;
+            --border:rgba(255,255,255,.10);
         }
-
-
-        /* ==================================================
-           GENERAL
-        ================================================== */
 
         * {
-
-            margin: 0;
-
-            padding: 0;
-
-            box-sizing: border-box;
-
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
         }
-
 
         html {
-
-            scroll-behavior: smooth;
-
+            scroll-behavior:smooth;
         }
-
 
         body {
-
-            font-family: 'Inter', sans-serif;
-
-            background: var(--navy);
-
-            color: var(--text);
-
-            overflow-x: hidden;
-
+            font-family:'Inter',sans-serif;
+            background:var(--navy);
+            color:var(--text);
+            overflow-x:hidden;
         }
 
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
-
-            font-family: 'Space Grotesk', sans-serif;
-
+        h1,h2,h3,h4,h5 {
+            font-family:'Space Grotesk',sans-serif;
         }
-
 
         a {
-
-            text-decoration: none;
-
+            text-decoration:none;
         }
-
-
-        /* ==================================================
-           NAVBAR
-        ================================================== */
 
         .navbar {
-
-            position: fixed;
-
-            top: 0;
-
-            left: 0;
-
-            width: 100%;
-
-            z-index: 1000;
-
-            padding: 22px 0;
-
-            background: rgba(5,11,22,0.72);
-
-            backdrop-filter: blur(18px);
-
-            border-bottom: 1px solid rgba(255,255,255,0.06);
-
-            transition: 0.3s ease;
-
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            z-index:1000;
+            padding:22px 0;
+            background:rgba(5,11,22,.72);
+            backdrop-filter:blur(18px);
+            border-bottom:1px solid rgba(255,255,255,.06);
+            transition:.3s;
         }
-
 
         .navbar.scrolled {
-
-            padding: 14px 0;
-
-            background: rgba(5,11,22,0.96);
-
+            padding:14px 0;
+            background:rgba(5,11,22,.96);
         }
-
 
         .navbar-brand {
-
-            font-family: 'Space Grotesk', sans-serif;
-
-            font-size: 28px;
-
-            font-weight: 700;
-
-            letter-spacing: -1px;
-
-            color: white;
-
+            font-family:'Space Grotesk';
+            font-size:28px;
+            font-weight:700;
+            color:white;
         }
-
 
         .navbar-brand span {
-
-            color: var(--cyan);
-
+            color:var(--cyan);
         }
-
 
         .navbar-nav {
-
-            gap: 8px;
-
+            gap:8px;
         }
-
 
         .nav-link {
-
-            color: #b8c3d4 !important;
-
-            font-size: 14px;
-
-            font-weight: 500;
-
-            padding: 10px 15px !important;
-
-            transition: 0.3s ease;
-
+            color:#b8c3d4!important;
+            font-size:14px;
+            padding:10px 15px!important;
         }
-
 
         .nav-link:hover,
         .nav-link.active {
-
-            color: white !important;
-
+            color:white!important;
         }
-
 
         .nav-contact {
-
-            background: var(--blue);
-
-            color: white !important;
-
-            padding: 11px 22px !important;
-
-            border-radius: 50px;
-
-            margin-left: 10px;
-
+            background:var(--blue);
+            color:white!important;
+            padding:11px 22px!important;
+            border-radius:50px;
+            margin-left:10px;
         }
-
-
-        .nav-contact:hover {
-
-            background: var(--blue-light);
-
-        }
-
 
         .navbar-toggler {
-
-            border: none;
-
-            box-shadow: none !important;
-
+            border:none;
+            box-shadow:none!important;
         }
-
 
         .navbar-toggler-icon {
-
-            filter: invert(1);
-
+            filter:invert(1);
         }
 
-
-        /* ==================================================
-           HERO
-        ================================================== */
-
-        .services-hero {
-
-            min-height: 760px;
-
-            display: flex;
-
-            align-items: center;
-
-            position: relative;
-
-            overflow: hidden;
+        .hero {
+            min-height:760px;
+            display:flex;
+            align-items:center;
+            position:relative;
+            overflow:hidden;
 
             background:
-
                 radial-gradient(
                     circle at 75% 35%,
-                    rgba(22,119,255,0.23),
+                    rgba(22,119,255,.23),
                     transparent 34%
                 ),
-
                 radial-gradient(
                     circle at 15% 85%,
-                    rgba(118,87,255,0.14),
+                    rgba(118,87,255,.14),
                     transparent 32%
                 ),
-
                 var(--navy);
-
         }
 
-
         .hero-grid {
-
-            position: absolute;
-
-            inset: 0;
-
-            opacity: 0.18;
+            position:absolute;
+            inset:0;
+            opacity:.18;
 
             background-image:
-
                 linear-gradient(
-                    rgba(255,255,255,0.035) 1px,
+                    rgba(255,255,255,.035) 1px,
                     transparent 1px
                 ),
-
                 linear-gradient(
                     90deg,
-                    rgba(255,255,255,0.035) 1px,
+                    rgba(255,255,255,.035) 1px,
                     transparent 1px
                 );
 
-            background-size: 70px 70px;
-
-            mask-image: linear-gradient(
-                to bottom,
-                black,
-                transparent
-            );
-
+            background-size:70px 70px;
         }
 
-
         .hero-orb {
-
-            position: absolute;
-
-            width: 500px;
-
-            height: 500px;
-
-            right: -160px;
-
-            top: 120px;
-
-            border-radius: 50%;
+            position:absolute;
+            width:500px;
+            height:500px;
+            right:-160px;
+            top:120px;
+            border-radius:50%;
 
             background:
-
                 radial-gradient(
                     circle,
-                    rgba(54,215,255,0.20),
-                    rgba(22,119,255,0.06),
+                    rgba(54,215,255,.20),
+                    rgba(22,119,255,.06),
                     transparent 70%
                 );
 
-            filter: blur(5px);
-
+            filter:blur(5px);
         }
-
 
         .hero-content {
-
-            position: relative;
-
-            z-index: 2;
-
-            max-width: 850px;
-
+            position:relative;
+            z-index:2;
+            max-width:850px;
         }
-
 
         .hero-label {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 10px;
-
-            padding: 8px 15px;
-
-            border-radius: 50px;
-
-            border: 1px solid rgba(54,215,255,0.25);
-
-            background: rgba(54,215,255,0.07);
-
-            color: var(--cyan);
-
-            font-size: 12px;
-
-            font-weight: 600;
-
-            letter-spacing: 1.5px;
-
-            text-transform: uppercase;
-
-            margin-bottom: 25px;
-
+            display:inline-flex;
+            align-items:center;
+            gap:10px;
+            padding:8px 15px;
+            border-radius:50px;
+            border:1px solid rgba(54,215,255,.25);
+            background:rgba(54,215,255,.07);
+            color:var(--cyan);
+            font-size:12px;
+            font-weight:600;
+            letter-spacing:1.5px;
+            text-transform:uppercase;
+            margin-bottom:25px;
         }
-
 
         .hero-label i {
-
-            font-size: 7px;
-
+            font-size:7px;
         }
 
-
-        .services-hero h1 {
-
-            font-size: clamp(55px,7vw,105px);
-
-            line-height: 0.96;
-
-            letter-spacing: -5px;
-
-            font-weight: 600;
-
-            margin-bottom: 30px;
-
+        .hero h1 {
+            font-size:clamp(55px,7vw,105px);
+            line-height:.96;
+            letter-spacing:-5px;
+            font-weight:600;
+            margin-bottom:30px;
         }
-
 
         .gradient-text {
+            background:linear-gradient(
+                90deg,
+                white,
+                var(--blue-light),
+                var(--cyan)
+            );
 
-            background:
-
-                linear-gradient(
-                    90deg,
-                    white,
-                    var(--blue-light),
-                    var(--cyan)
-                );
-
-            -webkit-background-clip: text;
-
-            -webkit-text-fill-color: transparent;
-
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
         }
-
 
         .hero-description {
-
-            max-width: 690px;
-
-            color: var(--muted);
-
-            font-size: 18px;
-
-            line-height: 1.8;
-
-            margin-bottom: 38px;
-
+            max-width:690px;
+            color:var(--muted);
+            font-size:18px;
+            line-height:1.8;
+            margin-bottom:38px;
         }
-
 
         .primary-button {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 10px;
-
-            padding: 15px 25px;
-
-            border-radius: 50px;
-
-            background: var(--blue);
-
-            color: white;
-
-            font-size: 14px;
-
-            font-weight: 600;
-
-            transition: 0.3s ease;
-
+            display:inline-flex;
+            align-items:center;
+            gap:10px;
+            padding:15px 25px;
+            border-radius:50px;
+            background:var(--blue);
+            color:white;
+            font-size:14px;
+            font-weight:600;
+            transition:.3s;
         }
-
 
         .primary-button:hover {
-
-            color: white;
-
-            background: var(--blue-light);
-
-            transform: translateY(-2px);
-
+            color:white;
+            background:var(--blue-light);
+            transform:translateY(-2px);
         }
-
-
-        /* ==================================================
-           SECTION
-        ================================================== */
 
         .section {
-
-            padding: 120px 0;
-
+            padding:120px 0;
         }
-
 
         .section-label {
-
-            color: var(--blue-light);
-
-            font-size: 12px;
-
-            font-weight: 700;
-
-            letter-spacing: 2px;
-
-            text-transform: uppercase;
-
-            margin-bottom: 18px;
-
+            color:var(--blue-light);
+            font-size:12px;
+            font-weight:700;
+            letter-spacing:2px;
+            text-transform:uppercase;
+            margin-bottom:18px;
         }
-
 
         .section-title {
-
-            font-size: clamp(40px,5vw,65px);
-
-            line-height: 1.05;
-
-            letter-spacing: -2.5px;
-
-            margin-bottom: 25px;
-
+            font-size:clamp(40px,5vw,65px);
+            line-height:1.05;
+            letter-spacing:-2.5px;
+            margin-bottom:25px;
         }
-
 
         .section-text {
-
-            color: var(--muted);
-
-            line-height: 1.8;
-
+            color:var(--muted);
+            line-height:1.8;
         }
-
-
-        /* ==================================================
-           INTRO
-        ================================================== */
 
         .intro-section {
-
-            background: var(--off-white);
-
-            color: var(--dark-text);
-
+            background:var(--off-white);
+            color:var(--dark-text);
         }
-
 
         .intro-section .section-label {
-
-            color: var(--blue);
-
+            color:var(--blue);
         }
-
 
         .intro-section .section-text {
-
-            color: #657083;
-
+            color:#657083;
         }
-
 
         .intro-large {
-
-            font-family: 'Space Grotesk', sans-serif;
-
-            font-size: clamp(28px,3vw,43px);
-
-            line-height: 1.25;
-
-            letter-spacing: -1px;
-
+            font-family:'Space Grotesk';
+            font-size:clamp(28px,3vw,43px);
+            line-height:1.25;
         }
-
-
-        .intro-highlight {
-
-            color: var(--blue);
-
-        }
-
-
-        /* ==================================================
-           SERVICES GRID
-        ================================================== */
 
         .services-section {
-
-            background: var(--navy-2);
-
+            background:var(--navy-2);
         }
-
 
         .service-card {
-
-            position: relative;
-
-            height: 100%;
-
-            padding: 38px;
-
-            border-radius: 22px;
-
-            border: 1px solid var(--border);
+            position:relative;
+            height:100%;
+            padding:38px;
+            border-radius:22px;
+            border:1px solid var(--border);
 
             background:
-
                 linear-gradient(
                     145deg,
-                    rgba(255,255,255,0.055),
-                    rgba(255,255,255,0.015)
+                    rgba(255,255,255,.055),
+                    rgba(255,255,255,.015)
                 );
 
-            overflow: hidden;
-
-            transition: 0.4s ease;
-
+            overflow:hidden;
+            transition:.4s;
         }
-
-
-        .service-card::before {
-
-            content: "";
-
-            position: absolute;
-
-            width: 180px;
-
-            height: 180px;
-
-            right: -90px;
-
-            top: -90px;
-
-            border-radius: 50%;
-
-            background: rgba(22,119,255,0.12);
-
-            transition: 0.4s ease;
-
-        }
-
 
         .service-card:hover {
-
-            transform: translateY(-9px);
-
-            border-color: rgba(54,215,255,0.30);
-
-            box-shadow:
-
-                0 25px 70px rgba(0,0,0,0.28);
-
+            transform:translateY(-9px);
+            border-color:rgba(54,215,255,.30);
+            box-shadow:0 25px 70px rgba(0,0,0,.28);
         }
-
-
-        .service-card:hover::before {
-
-            transform: scale(1.5);
-
-        }
-
 
         .service-icon {
-
-            width: 60px;
-
-            height: 60px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            border-radius: 17px;
-
-            background: rgba(22,119,255,0.12);
-
-            color: var(--cyan);
-
-            font-size: 21px;
-
-            margin-bottom: 25px;
-
-            position: relative;
-
-            z-index: 2;
-
+            width:60px;
+            height:60px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            border-radius:17px;
+            background:rgba(22,119,255,.12);
+            color:var(--cyan);
+            font-size:21px;
+            margin-bottom:25px;
         }
-
 
         .service-card h3 {
-
-            font-size: 25px;
-
-            margin-bottom: 14px;
-
-            position: relative;
-
-            z-index: 2;
-
+            font-size:25px;
+            margin-bottom:14px;
         }
-
 
         .service-card p {
-
-            color: var(--muted);
-
-            font-size: 14px;
-
-            line-height: 1.75;
-
-            position: relative;
-
-            z-index: 2;
-
+            color:var(--muted);
+            font-size:14px;
+            line-height:1.75;
         }
-
 
         .service-link {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 8px;
-
-            color: var(--blue-light);
-
-            font-size: 13px;
-
-            font-weight: 600;
-
-            margin-top: 15px;
-
-            position: relative;
-
-            z-index: 2;
-
+            display:inline-flex;
+            align-items:center;
+            gap:8px;
+            color:var(--blue-light);
+            font-size:13px;
+            font-weight:600;
+            margin-top:15px;
         }
-
-
-        .service-link i {
-
-            font-size: 10px;
-
-            transition: 0.3s ease;
-
-        }
-
-
-        .service-card:hover .service-link i {
-
-            transform: translateX(5px);
-
-        }
-
-
-        /* ==================================================
-           FEATURED SERVICE
-        ================================================== */
 
         .featured-section {
-
-            background: var(--navy);
-
+            background:var(--navy);
         }
-
 
         .featured-box {
-
-            position: relative;
-
-            padding: 60px;
-
-            border-radius: 30px;
-
-            overflow: hidden;
-
-            border: 1px solid rgba(54,215,255,0.14);
+            padding:60px;
+            border-radius:30px;
+            border:1px solid rgba(54,215,255,.14);
 
             background:
-
                 radial-gradient(
                     circle at 85% 30%,
-                    rgba(22,119,255,0.18),
+                    rgba(22,119,255,.18),
                     transparent 35%
                 ),
-
                 #07101d;
-
         }
-
 
         .featured-box h2 {
-
-            font-size: clamp(38px,5vw,62px);
-
-            line-height: 1.05;
-
-            letter-spacing: -2px;
-
-            margin-bottom: 20px;
-
+            font-size:clamp(38px,5vw,62px);
+            line-height:1.05;
+            letter-spacing:-2px;
         }
-
 
         .featured-box p {
-
-            color: var(--muted);
-
-            max-width: 650px;
-
-            line-height: 1.8;
-
+            color:var(--muted);
+            max-width:650px;
+            line-height:1.8;
         }
-
 
         .feature-pills {
-
-            display: flex;
-
-            flex-wrap: wrap;
-
-            gap: 10px;
-
-            margin-top: 30px;
-
+            display:flex;
+            flex-wrap:wrap;
+            gap:10px;
+            margin-top:30px;
         }
-
 
         .feature-pill {
-
-            padding: 9px 14px;
-
-            border-radius: 50px;
-
-            background: rgba(255,255,255,0.05);
-
-            border: 1px solid rgba(255,255,255,0.09);
-
-            color: #cbd4e2;
-
-            font-size: 12px;
-
+            padding:9px 14px;
+            border-radius:50px;
+            background:rgba(255,255,255,.05);
+            border:1px solid rgba(255,255,255,.09);
+            color:#cbd4e2;
+            font-size:12px;
         }
-
-
-        /* ==================================================
-           PROCESS
-        ================================================== */
 
         .process-section {
-
-            background: var(--off-white);
-
-            color: var(--dark-text);
-
+            background:var(--off-white);
+            color:var(--dark-text);
         }
-
 
         .process-section .section-label {
-
-            color: var(--blue);
-
+            color:var(--blue);
         }
-
-
-        .process-section .section-text {
-
-            color: #657083;
-
-        }
-
 
         .process-card {
-
-            position: relative;
-
-            padding: 30px;
-
-            height: 100%;
-
-            border-top: 2px solid var(--blue);
-
+            padding:30px;
+            height:100%;
+            border-top:2px solid var(--blue);
         }
-
 
         .process-number {
-
-            font-family: 'Space Grotesk', sans-serif;
-
-            font-size: 70px;
-
-            line-height: 1;
-
-            color: rgba(20,32,51,0.09);
-
-            font-weight: 600;
-
-            margin-bottom: -20px;
-
+            font-family:'Space Grotesk';
+            font-size:70px;
+            color:rgba(20,32,51,.09);
+            font-weight:600;
+            margin-bottom:-20px;
         }
-
-
-        .process-card h3 {
-
-            font-size: 23px;
-
-            margin-bottom: 12px;
-
-        }
-
 
         .process-card p {
-
-            color: #657083;
-
-            line-height: 1.7;
-
-            font-size: 14px;
-
+            color:#657083;
+            line-height:1.7;
+            font-size:14px;
         }
-
-
-        /* ==================================================
-           INDUSTRIES
-        ================================================== */
 
         .industries-section {
-
-            background: var(--navy-2);
-
+            background:var(--navy-2);
         }
-
 
         .industry {
-
-            padding: 25px 0;
-
-            border-bottom: 1px solid var(--border);
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            gap: 20px;
-
-            transition: 0.3s ease;
-
+            padding:25px 0;
+            border-bottom:1px solid var(--border);
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            transition:.3s;
         }
-
 
         .industry:hover {
-
-            padding-left: 10px;
-
+            padding-left:10px;
         }
-
 
         .industry-name {
-
-            font-family: 'Space Grotesk', sans-serif;
-
-            font-size: clamp(22px,3vw,35px);
-
-            color: white;
-
+            font-family:'Space Grotesk';
+            font-size:clamp(22px,3vw,35px);
         }
-
 
         .industry-icon {
-
-            width: 42px;
-
-            height: 42px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            border-radius: 50%;
-
-            border: 1px solid var(--border);
-
-            color: var(--cyan);
-
-            font-size: 13px;
-
-            transition: 0.3s ease;
-
+            width:42px;
+            height:42px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            border-radius:50%;
+            border:1px solid var(--border);
+            color:var(--cyan);
         }
 
-
-        .industry:hover .industry-icon {
-
-            background: var(--blue);
-
-            border-color: var(--blue);
-
-            color: white;
-
-        }
-
-
-        /* ==================================================
-           CTA
-        ================================================== */
-
-        .cta-section {
-
-            padding: 120px 0;
-
-            text-align: center;
-
+        .cta {
+            padding:120px 0;
+            text-align:center;
             background:
-
                 radial-gradient(
-                    circle at 50% 0%,
-                    rgba(22,119,255,0.22),
+                    circle at 50% 0,
+                    rgba(22,119,255,.22),
                     transparent 45%
                 ),
-
                 var(--navy);
-
         }
 
-
-        .cta-box {
-
-            max-width: 850px;
-
-            margin: auto;
-
+        .cta h2 {
+            font-size:clamp(43px,6vw,76px);
+            line-height:1;
+            letter-spacing:-3px;
+            margin-bottom:25px;
         }
 
-
-        .cta-box h2 {
-
-            font-size: clamp(43px,6vw,76px);
-
-            line-height: 1;
-
-            letter-spacing: -3px;
-
-            margin-bottom: 25px;
-
+        .cta p {
+            max-width:620px;
+            margin:0 auto 35px;
+            color:var(--muted);
+            line-height:1.8;
         }
-
-
-        .cta-box p {
-
-            max-width: 620px;
-
-            margin: 0 auto 35px;
-
-            color: var(--muted);
-
-            line-height: 1.8;
-
-        }
-
-
-        /* ==================================================
-           FOOTER
-        ================================================== */
 
         footer {
-
-            background: #030812;
-
-            padding: 70px 0 25px;
-
-            border-top: 1px solid var(--border);
-
+            background:#030812;
+            padding:70px 0 25px;
+            border-top:1px solid var(--border);
         }
-
 
         .footer-brand {
-
-            font-family: 'Space Grotesk', sans-serif;
-
-            font-size: 28px;
-
-            font-weight: 700;
-
-            color: white;
-
-            margin-bottom: 20px;
-
+            font-family:'Space Grotesk';
+            font-size:28px;
+            font-weight:700;
+            color:white;
+            margin-bottom:20px;
         }
-
 
         .footer-brand span {
-
-            color: var(--cyan);
-
+            color:var(--cyan);
         }
-
 
         .footer-description {
-
-            max-width: 400px;
-
-            color: var(--muted);
-
-            line-height: 1.7;
-
+            max-width:400px;
+            color:var(--muted);
+            line-height:1.7;
         }
-
 
         .footer-title {
-
-            color: white;
-
-            font-size: 14px;
-
-            font-weight: 600;
-
-            margin-bottom: 20px;
-
+            color:white;
+            font-size:14px;
+            font-weight:600;
+            margin-bottom:20px;
         }
-
 
         .footer-links {
-
-            list-style: none;
-
-            padding: 0;
-
-            margin: 0;
-
+            list-style:none;
+            padding:0;
         }
-
 
         .footer-links li {
-
-            margin-bottom: 12px;
-
+            margin-bottom:12px;
         }
-
 
         .footer-links a {
-
-            color: var(--muted);
-
-            font-size: 14px;
-
-            transition: 0.3s ease;
-
+            color:var(--muted);
+            font-size:14px;
         }
-
 
         .footer-links a:hover {
-
-            color: var(--cyan);
-
+            color:var(--cyan);
         }
-
 
         .social-links {
-
-            display: flex;
-
-            gap: 10px;
-
-            margin-top: 25px;
-
+            display:flex;
+            gap:10px;
+            margin-top:25px;
         }
-
 
         .social-links a {
-
-            width: 40px;
-
-            height: 40px;
-
-            border-radius: 50%;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            color: var(--muted);
-
-            border: 1px solid var(--border);
-
-            transition: 0.3s ease;
-
+            width:40px;
+            height:40px;
+            border-radius:50%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:var(--muted);
+            border:1px solid var(--border);
         }
-
 
         .social-links a:hover {
-
-            color: white;
-
-            background: var(--blue);
-
-            border-color: var(--blue);
-
+            color:white;
+            background:var(--blue);
         }
-
 
         .footer-bottom {
-
-            display: flex;
-
-            justify-content: space-between;
-
-            gap: 20px;
-
-            margin-top: 60px;
-
-            padding-top: 25px;
-
-            border-top: 1px solid var(--border);
-
-            color: #697589;
-
-            font-size: 12px;
-
+            display:flex;
+            justify-content:space-between;
+            gap:20px;
+            margin-top:60px;
+            padding-top:25px;
+            border-top:1px solid var(--border);
+            color:#697589;
+            font-size:12px;
         }
 
-
-        /* ==================================================
-           RESPONSIVE
-        ================================================== */
-
-        @media (max-width: 991px) {
-
+        @media(max-width:991px) {
             .navbar-nav {
-
-                padding-top: 20px;
-
+                padding-top:20px;
             }
-
 
             .nav-contact {
-
-                display: inline-block;
-
-                margin: 10px 0 0;
-
+                display:inline-block;
+                margin:10px 0 0;
             }
-
-
-            .services-hero {
-
-                min-height: 700px;
-
-            }
-
 
             .section {
-
-                padding: 90px 0;
-
+                padding:90px 0;
             }
-
 
             .featured-box {
-
-                padding: 45px;
-
+                padding:45px;
             }
-
         }
 
+        @media(max-width:767px) {
 
-        @media (max-width: 767px) {
-
-            .navbar {
-
-                padding: 15px 0;
-
+            .hero {
+                min-height:650px;
+                padding-top:80px;
             }
 
-
-            .services-hero {
-
-                min-height: 650px;
-
-                padding-top: 80px;
-
+            .hero h1 {
+                font-size:54px;
+                letter-spacing:-3px;
             }
-
-
-            .services-hero h1 {
-
-                font-size: 54px;
-
-                letter-spacing: -3px;
-
-            }
-
-
-            .hero-description {
-
-                font-size: 16px;
-
-            }
-
 
             .section {
-
-                padding: 75px 0;
-
+                padding:75px 0;
             }
-
 
             .service-card {
-
-                padding: 30px;
-
+                padding:30px;
             }
-
 
             .featured-box {
-
-                padding: 35px 25px;
-
+                padding:35px 25px;
             }
-
-
-            .industry {
-
-                padding: 20px 0;
-
-            }
-
 
             .footer-bottom {
-
-                flex-direction: column;
-
+                flex-direction:column;
             }
-
         }
 
     </style>
@@ -1356,136 +645,878 @@
 <body>
 
 
-    <!-- ==================================================
-         NAVBAR
-    ================================================== -->
+<!-- NAVBAR -->
 
-    <nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg">
 
-        <div class="container">
+    <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+            NM<span>.</span>
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="services.html">
+                        Services
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="odoo.html">
+                        Odoo
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#whatsapp">
+                        WhatsApp API
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#industries">
+                        Industries
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link nav-contact" href="index.html#contact">
+                        Let's Talk
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
 
 
-            <a
-                class="navbar-brand"
-                href="index.html">
+<!-- HERO -->
 
-                NM<span>.</span>
+<section class="hero">
+
+    <div class="hero-grid"></div>
+
+    <div class="hero-orb"></div>
+
+    <div class="container">
+
+        <div class="hero-content" data-aos="fade-up">
+
+            <div class="hero-label">
+
+                <i class="fa-solid fa-circle"></i>
+
+                What We Do
+
+            </div>
+
+            <h1>
+
+                Technology
+                built around
+
+                <span class="gradient-text">
+                    your business.
+                </span>
+
+            </h1>
+
+            <p class="hero-description">
+
+                From Odoo implementation to WhatsApp
+                automation and custom integrations, we
+                build connected digital solutions that
+                simplify everyday business operations.
+
+            </p>
+
+            <a href="#services" class="primary-button">
+
+                Explore our services
+
+                <i class="fa-solid fa-arrow-down"></i>
 
             </a>
 
+        </div>
 
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mainNavbar"
-                aria-controls="mainNavbar"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
+    </div>
 
-                <span class="navbar-toggler-icon"></span>
-
-            </button>
+</section>
 
 
-            <div
-                class="collapse navbar-collapse"
-                id="mainNavbar">
+<!-- INTRO -->
+
+<section class="section intro-section">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-5">
+
+                <div class="section-label">
+                    Our Expertise
+                </div>
+
+                <h2 class="section-title">
+
+                    One technology
+                    partner.
+                    Multiple solutions.
+
+                </h2>
+
+            </div>
+
+            <div class="col-lg-7">
+
+                <p class="intro-large mb-4">
+
+                    We connect the systems that keep
+                    your business moving.
+
+                </p>
+
+                <p class="section-text mb-3">
+
+                    Modern businesses rely on multiple
+                    tools to manage customers, sales,
+                    communication and operations.
+
+                </p>
+
+                <p class="section-text">
+
+                    NM Technologies helps bring these
+                    systems together through Odoo,
+                    WhatsApp API, CRM integration,
+                    automation and custom software.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
-                <ul class="navbar-nav ms-auto align-items-lg-center">
+<!-- SERVICES -->
+
+<section class="section services-section" id="services">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <div class="section-label">
+                Our Services
+            </div>
+
+            <h2 class="section-title">
+                Solutions that work together.
+            </h2>
+
+            <p class="section-text mx-auto" style="max-width:650px;">
+
+                Choose one solution or combine multiple
+                services to create a complete digital
+                business ecosystem.
+
+            </p>
+
+        </div>
 
 
-                    <li class="nav-item">
+        <div class="row g-4">
 
-                        <a
-                            class="nav-link"
-                            href="index.html">
 
-                            Home
+            <div class="col-lg-4 col-md-6">
 
-                        </a>
+                <div class="service-card">
 
+                    <div class="service-icon">
+                        <i class="fa-solid fa-cubes"></i>
+                    </div>
+
+                    <h3>Odoo ERP & CRM</h3>
+
+                    <p>
+                        Implement and customize Odoo to manage
+                        CRM, sales, inventory, accounting, HR
+                        and other business operations.
+                    </p>
+
+                    <a href="odoo.html" class="service-link">
+                        Explore Odoo
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+
+                    <h3>WhatsApp API</h3>
+
+                    <p>
+                        Connect WhatsApp with your business
+                        systems for customer communication,
+                        notifications and automated messaging.
+                    </p>
+
+                    <a href="index.html#whatsapp" class="service-link">
+                        Explore WhatsApp
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+
+                    <h3>Business Automation</h3>
+
+                    <p>
+                        Automate repetitive business processes,
+                        reduce manual work and create faster
+                        workflows across your organization.
+                    </p>
+
+                    <a href="index.html#contact" class="service-link">
+                        Automate Your Workflow
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+
+                    <h3>CRM Integration</h3>
+
+                    <p>
+                        Connect your CRM with websites,
+                        communication platforms and other
+                        business applications.
+                    </p>
+
+                    <a href="index.html#contact" class="service-link">
+                        Connect Your CRM
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+
+                    <h3>Chatbots</h3>
+
+                    <p>
+                        Build automated conversational
+                        experiences to answer questions,
+                        qualify leads and support customers.
+                    </p>
+
+                    <a href="index.html#contact" class="service-link">
+                        Build a Chatbot
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <h3>Custom Software</h3>
+
+                    <p>
+                        Develop custom digital solutions for
+                        unique business requirements that cannot
+                        be solved by standard software alone.
+                    </p>
+
+                    <a href="index.html#contact" class="service-link">
+                        Discuss Your Project
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-plug"></i>
+                    </div>
+
+                    <h3>API & Integrations</h3>
+
+                    <p>
+                        Connect applications and services through
+                        APIs so information can move smoothly
+                        between business systems.
+                    </p>
+
+                    <a href="index.html#contact" class="service-link">
+                        Connect Your Systems
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+
+                    <h3>Support & Maintenance</h3>
+
+                    <p>
+                        Keep your digital systems running smoothly
+                        with technical support, troubleshooting
+                        and continuous improvements.
+                    </p>
+
+                    <a href="index.html#contact" class="service-link">
+                        Get Support
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+
+                    <h3>Digital Solutions</h3>
+
+                    <p>
+                        From dashboards to customer portals
+                        and digital workflows, we create solutions
+                        designed around your goals.
+                    </p>
+
+                    <a href="index.html#contact" class="service-link">
+                        Build Your Solution
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURED ODOO -->
+
+<section class="section featured-section">
+
+    <div class="container">
+
+        <div class="featured-box">
+
+            <div class="section-label">
+                Featured Solution
+            </div>
+
+            <h2>
+
+                Build your business on a connected
+
+                <span class="gradient-text">
+                    Odoo ecosystem.
+                </span>
+
+            </h2>
+
+            <p>
+                Bring CRM, sales, inventory, accounting,
+                employees and other operations together
+                with Odoo.
+            </p>
+
+            <div class="feature-pills">
+
+                <div class="feature-pill">Odoo CRM</div>
+                <div class="feature-pill">Sales</div>
+                <div class="feature-pill">Inventory</div>
+                <div class="feature-pill">Accounting</div>
+                <div class="feature-pill">HR</div>
+                <div class="feature-pill">Website</div>
+                <div class="feature-pill">API Integration</div>
+
+            </div>
+
+            <div class="mt-4">
+
+                <a href="odoo.html" class="primary-button">
+
+                    Discover Odoo
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section class="section process-section">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <div class="section-label">
+                How We Work
+            </div>
+
+            <h2 class="section-title">
+                From challenge to solution.
+            </h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="process-card">
+
+                    <div class="process-number">01</div>
+
+                    <h3>Understand</h3>
+
+                    <p>
+                        We learn about your business,
+                        current workflow and challenges.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="process-card">
+
+                    <div class="process-number">02</div>
+
+                    <h3>Plan</h3>
+
+                    <p>
+                        We identify the right technologies,
+                        integrations and automation opportunities.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="process-card">
+
+                    <div class="process-number">03</div>
+
+                    <h3>Build</h3>
+
+                    <p>
+                        We configure, develop and integrate
+                        the solution around your requirements.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="process-card">
+
+                    <div class="process-number">04</div>
+
+                    <h3>Improve</h3>
+
+                    <p>
+                        We support your system and help improve
+                        it as your business grows.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- INDUSTRIES -->
+
+<section class="section industries-section">
+
+    <div class="container">
+
+        <div class="row g-5">
+
+            <div class="col-lg-5">
+
+                <div class="section-label">
+                    Industries
+                </div>
+
+                <h2 class="section-title">
+                    Technology for every kind of business.
+                </h2>
+
+                <p class="section-text">
+                    Our solutions can be adapted to different
+                    industries, workflows and business models.
+                </p>
+
+            </div>
+
+
+            <div class="col-lg-7">
+
+                <div class="industry">
+                    <span class="industry-name">Real Estate</span>
+                    <div class="industry-icon">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                </div>
+
+                <div class="industry">
+                    <span class="industry-name">Education</span>
+                    <div class="industry-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                </div>
+
+                <div class="industry">
+                    <span class="industry-name">E-Commerce</span>
+                    <div class="industry-icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </div>
+
+                <div class="industry">
+                    <span class="industry-name">Healthcare</span>
+                    <div class="industry-icon">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                </div>
+
+                <div class="industry">
+                    <span class="industry-name">Hospitality</span>
+                    <div class="industry-icon">
+                        <i class="fa-solid fa-hotel"></i>
+                    </div>
+                </div>
+
+                <div class="industry">
+                    <span class="industry-name">Automotive</span>
+                    <div class="industry-icon">
+                        <i class="fa-solid fa-car"></i>
+                    </div>
+                </div>
+
+                <div class="industry">
+                    <span class="industry-name">Professional Services</span>
+                    <div class="industry-icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div>
+
+            <div class="section-label">
+                Have a business challenge?
+            </div>
+
+            <h2>
+
+                Let's turn it into
+
+                <span class="gradient-text">
+                    a solution.
+                </span>
+
+            </h2>
+
+            <p>
+                Tell us about your business and what you
+                want to improve.
+            </p>
+
+            <a href="index.html#contact" class="primary-button">
+
+                Start a Conversation
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="row g-5">
+
+            <div class="col-lg-5">
+
+                <div class="footer-brand">
+                    NM<span>.</span>
+                </div>
+
+                <p class="footer-description">
+                    Business automation, Odoo, WhatsApp API
+                    and digital solutions designed to help
+                    businesses work smarter.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <div class="footer-title">
+                    Company
+                </div>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="index.html">Home</a>
                     </li>
 
-
-                    <li class="nav-item">
-
-                        <a
-                            class="nav-link"
-                            href="about.html">
-
-                            About
-
-                        </a>
-
+                    <li>
+                        <a href="about.html">About</a>
                     </li>
 
-
-                    <li class="nav-item">
-
-                        <a
-                            class="nav-link active"
-                            href="services.html">
-
-                            Services
-
-                        </a>
-
+                    <li>
+                        <a href="services.html">Services</a>
                     </li>
 
-
-                    <li class="nav-item">
-
-                        <a
-                            class="nav-link"
-                            href="odoo.html">
-
-                            Odoo
-
-                        </a>
-
+                    <li>
+                        <a href="index.html#contact">Contact</a>
                     </li>
 
+                </ul>
 
-                    <li class="nav-item">
+            </div>
 
-                        <a
-                            class="nav-link"
-                            href="index.html#whatsapp">
 
+            <div class="col-6 col-lg-2">
+
+                <div class="footer-title">
+                    Solutions
+                </div>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="odoo.html">Odoo</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#whatsapp">
                             WhatsApp API
-
                         </a>
-
                     </li>
 
-
-                    <li class="nav-item">
-
-                        <a
-                            class="nav-link"
-                            href="index.html#industries">
-
-                            Industries
-
+                    <li>
+                        <a href="services.html#services">
+                            Automation
                         </a>
-
                     </li>
 
-
-                    <li class="nav-item">
-
-                        <a
-                            class="nav-link nav-contact"
-                            href="index.html#contact">
-
-                            Let's Talk
-
+                    <li>
+                        <a href="services.html#services">
+                            CRM Integration
                         </a>
-
                     </li>
 
+                </ul>
+
+            </div>
+
+
+            <div class="col-lg-3">
+
+                <div class="footer-title">
+                    Contact
+                </div>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="mailto:info@nmtechnologies.com">
+                            <i class="fa-regular fa-envelope me-2"></i>
+                            info@nmtechnologies.com
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="tel:+910000000000">
+                            <i class="fa-solid fa-phone me-2"></i>
+                            +91 00000 00000
+                        </a>
+                    </li>
 
                 </ul>
 
@@ -1493,1658 +1524,50 @@
 
         </div>
 
-    </nav>
 
+        <div class="footer-bottom">
 
+            <div>
+                © 2026 NM Technologies. All rights reserved.
+            </div>
 
-    <!-- ==================================================
-         HERO
-    ================================================== -->
-
-    <section class="services-hero">
-
-
-        <div class="hero-grid"></div>
-
-        <div class="hero-orb"></div>
-
-
-        <div class="container">
-
-
-            <div
-                class="hero-content"
-                data-aos="fade-up"
-                data-aos-duration="900">
-
-
-                <div class="hero-label">
-
-                    <i class="fa-solid fa-circle"></i>
-
-                    What We Do
-
-                </div>
-
-
-                <h1>
-
-                    Technology
-                    built around
-
-                    <span class="gradient-text">
-                        your business.
-                    </span>
-
-                </h1>
-
-
-                <p class="hero-description">
-
-                    From Odoo implementation to WhatsApp
-                    automation and custom integrations, we
-                    build connected digital solutions that
-                    simplify everyday business operations.
-
-                </p>
-
-
-                <a
-                    href="#services"
-                    class="primary-button">
-
-                    Explore our services
-
-                    <i class="fa-solid fa-arrow-down"></i>
-
-                </a>
-
-
+            <div>
+                Odoo · WhatsApp API · Automation
             </div>
 
         </div>
 
-    </section>
+    </div>
 
+</footer>
 
 
-    <!-- ==================================================
-         INTRO
-    ================================================== -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <section class="section intro-section">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
+<script>
 
-        <div class="container">
+    AOS.init({
+        duration:800,
+        once:true,
+        offset:80
+    });
 
+    const navbar =
+        document.querySelector('.navbar');
 
-            <div class="row align-items-center g-5">
+    window.addEventListener('scroll',function(){
 
+        if(window.scrollY > 50){
+            navbar.classList.add('scrolled');
+        }else{
+            navbar.classList.remove('scrolled');
+        }
 
-                <div
-                    class="col-lg-5"
-                    data-aos="fade-right">
+    });
 
-
-                    <div class="section-label">
-
-                        Our Expertise
-
-                    </div>
-
-
-                    <h2 class="section-title">
-
-                        One technology
-                        partner.
-                        Multiple solutions.
-
-                    </h2>
-
-                </div>
-
-
-                <div
-                    class="col-lg-7"
-                    data-aos="fade-left">
-
-
-                    <p class="intro-large mb-4">
-
-                        We connect the systems that keep
-                        your business moving.
-
-                    </p>
-
-
-                    <p class="section-text mb-3">
-
-                        Modern businesses rely on multiple
-                        tools to manage customers, sales,
-                        communication and operations.
-
-                    </p>
-
-
-                    <p class="section-text">
-
-                        NM Technologies helps bring these
-                        systems together through Odoo,
-                        WhatsApp API, CRM integration,
-                        automation and custom software
-                        solutions.
-
-                    </p>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ==================================================
-         SERVICES
-    ================================================== -->
-
-    <section
-        class="section services-section"
-        id="services">
-
-
-        <div class="container">
-
-
-            <div
-                class="text-center mb-5"
-                data-aos="fade-up">
-
-
-                <div class="section-label">
-
-                    Our Services
-
-                </div>
-
-
-                <h2 class="section-title">
-
-                    Solutions that
-                    work together.
-
-                </h2>
-
-
-                <p
-                    class="section-text mx-auto"
-                    style="max-width:650px;">
-
-                    Choose one solution or combine multiple
-                    services to create a complete digital
-                    business ecosystem.
-
-                </p>
-
-            </div>
-
-
-
-            <div class="row g-4">
-
-
-                <!-- ODOO -->
-
-                <div
-                    class="col-lg-4 col-md-6"
-                    data-aos="fade-up">
-
-
-                    <div class="service-card">
-
-
-                        <div class="service-icon">
-
-                            <i class="fa-solid fa-cubes"></i>
-
-                        </div>
-
-
-                        <h3>
-
-                            Odoo ERP & CRM
-
-                        </h3>
-
-
-                        <p>
-
-                            Implement and customize Odoo
-                            to manage CRM, sales, inventory,
-                            accounting, HR and other business
-                            operations from one platform.
-
-                        </p>
-
-
-                        <a
-                            href="odoo.html"
-                            class="service-link">
-
-                            Explore Odoo
-
-                            <i class="fa-solid fa-arrow-right"></i>
-
-                        </a>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- WHATSAPP -->
-
-                <div
-                    class="col-lg-4 col-md-6"
-                    data-aos="fade-up"
-                    data-aos-delay="100">
-
-
-                    <div class="service-card">
-
-
-                        <div class="service-icon">
-
-                            <i class="fa-brands fa-whatsapp"></i>
-
-                        </div>
-
-
-                        <h3>
-
-                            WhatsApp API
-
-                        </h3>
-
-
-                        <p>
-
-                            Connect WhatsApp with your business
-                            systems for customer communication,
-                            notifications, lead management and
-                            automated messaging.
-
-                        </p>
-
-
-                        <a
-                            href="index.html#whatsapp"
-                            class="service-link">
-
-                            Explore WhatsApp solutions
-
-                            <i class="fa-solid fa-arrow-right"></i>
-
-                        </a>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- AUTOMATION -->
-
-                <div
-                    class="col-lg-4 col-md-6"
-                    data-aos="fade-up"
-                    data-aos-delay="200">
-
-
-                    <div class="service-card">
-
-
-                        <div class="service-icon">
-
-                            <i class="fa-solid fa-gears"></i>
-
-                        </div>
-
-
-                        <h3>
-
-                            Business Automation
-
-                        </h3>
-
-
-                        <p>
-
-                            Automate repetitive business
-                            processes, reduce manual work
-                            and create faster workflows
-                            across your organization.
-
-                        </p>
-
-
-                        <a
-                            href="index.html#contact"
-                            class="service-link">
-
-                            Automate your workflow
-
-                            <i class="fa-solid fa-arrow-right"></i>
-
-                        </a>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- CRM -->
-
-                <div
-                    class="col-lg-4 col-md-6"
-                    data-aos="fade-up">
-
-
-                    <div class="service-card">
-
-
-                        <div class="service-icon">
-
-                            <i class="fa-solid fa-chart-line"></i>
-
-                        </div>
-
-
-                        <h3>
-
-                            CRM Integration
-
-                        </h3>
-
-
-                        <p>
-
-                            Connect your CRM with websites,
-                            communication platforms and other
-                            business applications to keep
-                            customer information synchronized.
-
-                        </p>
-
-
-                        <a
-                            href="index.html#contact"
-                            class="service-link">
-
-                            Connect your CRM
-
-                            <i class="fa-solid fa-arrow-right"></i>
-
-                        </a>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- CHATBOT -->
-
-                <div
-                    class="col-lg-4 col-md-6"
-                    data-aos="fade-up"
-                    data-aos-delay="100">
-
-
-                    <div class="service-card">
-
-
-                        <div class="service-icon">
-
-                            <i class="fa-solid fa-robot"></i>
-
-                        </div>
-
-
-                        <h3>
-
-                            Chatbots
-
-                        </h3>
-
-
-                        <p>
-
-                            Build automated conversational
-                            experiences to answer questions,
-                            qualify leads and support customers
-                            across digital channels.
-
-                        </p>
-
-
-                        <a
-                            href="index.html#contact"
-                            class="service-link">
-
-                            Build a chatbot
-
-                            <i class="fa-solid fa-arrow-right"></i>
-
-                        </a>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- CUSTOM SOFTWARE -->
-
-                <div
-                    class="col-lg-4 col-md-6"
-                    data-aos="fade-up"
-                    data-aos-delay="200">
-
-
-                    <div class="service-card">
-
-
-                        <div class="service-icon">
-
-                            <i class="fa-solid fa-code"></i>
-
-                        </div>
-
-
-                        <h3>
-
-                            Custom Software
-
-                        </h3>
-
-
-                        <p>
-
-                            Develop custom digital solutions
-                            for unique business requirements
-                            that cannot be solved by standard
-                            software alone.
-
-                        </p>
-
-
-                        <a
-                            href="index.html#contact"
-                            class="service-link">
-
-                            Discuss your project
-
-                            <i class="fa-solid fa-arrow-right"></i>
-
-                        </a>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- INTEGRATION -->
-
-                <div
-                    class="col-lg-4 col-md-6"
-                    data-aos="fade-up">
-
-
-                    <div class="service-card">
-
-
-                        <div class="service-icon">
-
-                            <i class="fa-solid fa-plug"></i>
-
-                        </div>
-
-
-                        <h3>
-
-                            API & Integrations
-
-                        </h3>
-
-
-                        <p>
-
-                            Connect applications and services
-                            through APIs so information can
-                            move smoothly between your business
-                            systems.
-
-                        </p>
-
-
-                        <a
-                            href="index.html#contact"
-                            class="service-link">
-
-                            Connect your systems
-
-                            <i class="fa-solid fa-arrow-right"></i>
-
-                        </a>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- SUPPORT -->
-
-                <div
-                    class="col-lg-4 col-md-6"
-                    data-aos="fade-up"
-                    data-aos-delay="100">
-
-
-                    <div class="service-card">
-
-
-                        <div class="service-icon">
-
-                            <i class="fa-solid fa-headset"></i>
-
-                        </div>
-
-
-                        <h3>
-
-                            Support & Maintenance
-
-                        </h3>
-
-
-                        <p>
-
-                            Keep your digital systems running
-                            smoothly with ongoing technical
-                            support, troubleshooting,
-                            maintenance and improvements.
-
-                        </p>
-
-
-                        <a
-                            href="index.html#contact"
-                            class="service-link">
-
-                            Get support
-
-                            <i class="fa-solid fa-arrow-right"></i>
-
-                        </a>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- DIGITAL SOLUTIONS -->
-
-                <div
-                    class="col-lg-4 col-md-6"
-                    data-aos="fade-up"
-                    data-aos-delay="200">
-
-
-                    <div class="service-card">
-
-
-                        <div class="service-icon">
-
-                            <i class="fa-solid fa-laptop-code"></i>
-
-                        </div>
-
-
-                        <h3>
-
-                            Digital Solutions
-
-                        </h3>
-
-
-                        <p>
-
-                            From business dashboards to
-                            customer portals and digital
-                            workflows, we create solutions
-                            designed around your goals.
-
-                        </p>
-
-
-                        <a
-                            href="index.html#contact"
-                            class="service-link">
-
-                            Build your solution
-
-                            <i class="fa-solid fa-arrow-right"></i>
-
-                        </a>
-
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ==================================================
-         FEATURED ODOO
-    ================================================== -->
-
-    <section class="section featured-section">
-
-
-        <div class="container">
-
-
-            <div
-                class="featured-box"
-                data-aos="fade-up">
-
-
-                <div class="section-label">
-
-                    Featured Solution
-
-                </div>
-
-
-                <h2>
-
-                    Build your business
-                    on a connected
-
-                    <span class="gradient-text">
-                        Odoo ecosystem.
-                    </span>
-
-                </h2>
-
-
-                <p>
-
-                    Bring CRM, sales, inventory, accounting,
-                    employees and other operations together
-                    with Odoo. We help configure and customize
-                    the platform according to your business
-                    processes.
-
-                </p>
-
-
-                <div class="feature-pills">
-
-
-                    <div class="feature-pill">
-                        Odoo CRM
-                    </div>
-
-
-                    <div class="feature-pill">
-                        Sales
-                    </div>
-
-
-                    <div class="feature-pill">
-                        Inventory
-                    </div>
-
-
-                    <div class="feature-pill">
-                        Accounting
-                    </div>
-
-
-                    <div class="feature-pill">
-                        HR
-                    </div>
-
-
-                    <div class="feature-pill">
-                        Website
-                    </div>
-
-
-                    <div class="feature-pill">
-                        API Integration
-                    </div>
-
-
-                </div>
-
-
-                <div class="mt-4">
-
-
-                    <a
-                        href="odoo.html"
-                        class="primary-button">
-
-                        Discover Odoo
-
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                    </a>
-
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ==================================================
-         PROCESS
-    ================================================== -->
-
-    <section class="section process-section">
-
-
-        <div class="container">
-
-
-            <div
-                class="text-center mb-5"
-                data-aos="fade-up">
-
-
-                <div class="section-label">
-
-                    How We Work
-
-                </div>
-
-
-                <h2 class="section-title">
-
-                    From challenge
-                    to solution.
-
-                </h2>
-
-
-                <p
-                    class="section-text mx-auto"
-                    style="max-width:650px;">
-
-                    We focus on understanding your business
-                    before selecting the technology that
-                    solves the problem.
-
-                </p>
-
-            </div>
-
-
-
-            <div class="row g-4">
-
-
-                <!-- 01 -->
-
-                <div
-                    class="col-lg-3 col-md-6"
-                    data-aos="fade-up">
-
-
-                    <div class="process-card">
-
-
-                        <div class="process-number">
-                            01
-                        </div>
-
-
-                        <h3>
-                            Understand
-                        </h3>
-
-
-                        <p>
-
-                            We learn about your business,
-                            current workflow and the problems
-                            your team faces.
-
-                        </p>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- 02 -->
-
-                <div
-                    class="col-lg-3 col-md-6"
-                    data-aos="fade-up"
-                    data-aos-delay="100">
-
-
-                    <div class="process-card">
-
-
-                        <div class="process-number">
-                            02
-                        </div>
-
-
-                        <h3>
-                            Plan
-                        </h3>
-
-
-                        <p>
-
-                            We identify the right technologies,
-                            integrations and automation
-                            opportunities.
-
-                        </p>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- 03 -->
-
-                <div
-                    class="col-lg-3 col-md-6"
-                    data-aos="fade-up"
-                    data-aos-delay="200">
-
-
-                    <div class="process-card">
-
-
-                        <div class="process-number">
-                            03
-                        </div>
-
-
-                        <h3>
-                            Build
-                        </h3>
-
-
-                        <p>
-
-                            We configure, develop and integrate
-                            the solution while keeping your
-                            business requirements at the center.
-
-                        </p>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- 04 -->
-
-                <div
-                    class="col-lg-3 col-md-6"
-                    data-aos="fade-up"
-                    data-aos-delay="300">
-
-
-                    <div class="process-card">
-
-
-                        <div class="process-number">
-                            04
-                        </div>
-
-
-                        <h3>
-                            Improve
-                        </h3>
-
-
-                        <p>
-
-                            We support your system after launch
-                            and help improve it as your business
-                            grows.
-
-                        </p>
-
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ==================================================
-         INDUSTRIES
-    ================================================== -->
-
-    <section
-        class="section industries-section"
-        id="industries">
-
-
-        <div class="container">
-
-
-            <div class="row g-5">
-
-
-                <div
-                    class="col-lg-5"
-                    data-aos="fade-right">
-
-
-                    <div class="section-label">
-
-                        Industries
-
-                    </div>
-
-
-                    <h2 class="section-title">
-
-                        Technology for
-                        every kind of
-                        business.
-
-                    </h2>
-
-
-                    <p class="section-text">
-
-                        Our solutions can be adapted to
-                        different industries, workflows and
-                        business models.
-
-                    </p>
-
-
-                </div>
-
-
-
-                <div
-                    class="col-lg-7"
-                    data-aos="fade-left">
-
-
-                    <div class="industry">
-
-                        <span class="industry-name">
-                            Real Estate
-                        </span>
-
-                        <div class="industry-icon">
-
-                            <i class="fa-solid fa-building"></i>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="industry">
-
-                        <span class="industry-name">
-                            Education
-                        </span>
-
-                        <div class="industry-icon">
-
-                            <i class="fa-solid fa-graduation-cap"></i>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="industry">
-
-                        <span class="industry-name">
-                            E-Commerce
-                        </span>
-
-                        <div class="industry-icon">
-
-                            <i class="fa-solid fa-cart-shopping"></i>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="industry">
-
-                        <span class="industry-name">
-                            Healthcare
-                        </span>
-
-                        <div class="industry-icon">
-
-                            <i class="fa-solid fa-heart-pulse"></i>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="industry">
-
-                        <span class="industry-name">
-                            Hospitality
-                        </span>
-
-                        <div class="industry-icon">
-
-                            <i class="fa-solid fa-hotel"></i>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="industry">
-
-                        <span class="industry-name">
-                            Automotive
-                        </span>
-
-                        <div class="industry-icon">
-
-                            <i class="fa-solid fa-car"></i>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="industry">
-
-                        <span class="industry-name">
-                            Professional Services
-                        </span>
-
-                        <div class="industry-icon">
-
-                            <i class="fa-solid fa-briefcase"></i>
-
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ==================================================
-         CTA
-    ================================================== -->
-
-    <section class="cta-section">
-
-
-        <div class="container">
-
-
-            <div
-                class="cta-box"
-                data-aos="fade-up">
-
-
-                <div class="section-label">
-
-                    Have a business challenge?
-
-                </div>
-
-
-                <h2>
-
-                    Let's turn it into
-
-                    <span class="gradient-text">
-                        a solution.
-                    </span>
-
-                </h2>
-
-
-                <p>
-
-                    Tell us about your business, your current
-                    systems and what you want to improve.
-                    We'll help you find the right technology.
-
-                </p>
-
-
-                <a
-                    href="index.html#contact"
-                    class="primary-button">
-
-                    Start a conversation
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </a>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ==================================================
-         FOOTER
-    ================================================== -->
-
-    <footer>
-
-
-        <div class="container">
-
-
-            <div class="row g-5">
-
-
-                <!-- BRAND -->
-
-                <div class="col-lg-5">
-
-
-                    <div class="footer-brand">
-
-                        NM<span>.</span>
-
-                    </div>
-
-
-                    <p class="footer-description">
-
-                        Business automation, Odoo,
-                        WhatsApp API and digital solutions
-                        designed to help businesses work
-                        smarter.
-
-                    </p>
-
-
-                    <div class="social-links">
-
-
-                        <a
-                            href="#"
-                            aria-label="LinkedIn">
-
-                            <i class="fa-brands fa-linkedin-in"></i>
-
-                        </a>
-
-
-                        <a
-                            href="#"
-                            aria-label="Instagram">
-
-                            <i class="fa-brands fa-instagram"></i>
-
-                        </a>
-
-
-                        <a
-                            href="#"
-                            aria-label="Facebook">
-
-                            <i class="fa-brands fa-facebook-f"></i>
-
-                        </a>
-
-
-                        <a
-                            href="#"
-                            aria-label="WhatsApp">
-
-                            <i class="fa-brands fa-whatsapp"></i>
-
-                        </a>
-
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- COMPANY -->
-
-                <div class="col-6 col-lg-2">
-
-
-                    <div class="footer-title">
-
-                        Company
-
-                    </div>
-
-
-                    <ul class="footer-links">
-
-
-                        <li>
-                            <a href="index.html">
-                                Home
-                            </a>
-                        </li>
-
-
-                        <li>
-                            <a href="about.html">
-                                About
-                            </a>
-                        </li>
-
-
-                        <li>
-                            <a href="services.html">
-                                Services
-                            </a>
-                        </li>
-
-
-                        <li>
-                            <a href="index.html#contact">
-                                Contact
-                            </a>
-                        </li>
-
-
-                    </ul>
-
-
-                </div>
-
-
-
-                <!-- SOLUTIONS -->
-
-                <div class="col-6 col-lg-2">
-
-
-                    <div class="footer-title">
-
-                        Solutions
-
-                    </div>
-
-
-                    <ul class="footer-links">
-
-
-                        <li>
-                            <a href="odoo.html">
-                                Odoo
-                            </a>
-                        </li>
-
-
-                        <li>
-                            <a href="index.html#whatsapp">
-                                WhatsApp API
-                            </a>
-                        </li>
-
-
-                        <li>
-                            <a href="services.html">
-                                Automation
-                            </a>
-                        </li>
-
-
-                        <li>
-                            <a href="services.html">
-                                CRM Integration
-                            </a>
-                        </li>
-
-
-                    </ul>
-
-
-                </div>
-
-
-
-                <!-- CONTACT -->
-
-                <div class="col-lg-3">
-
-
-                    <div class="footer-title">
-
-                        Contact
-
-                    </div>
-
-
-                    <ul class="footer-links">
-
-
-                        <li>
-
-                            <a
-                                href="mailto:info@nmtechnologies.com">
-
-                                <i
-                                    class="fa-regular fa-envelope me-2">
-                                </i>
-
-                                info@nmtechnologies.com
-
-                            </a>
-
-                        </li>
-
-
-                        <li>
-
-                            <a href="tel:+910000000000">
-
-                                <i
-                                    class="fa-solid fa-phone me-2">
-                                </i>
-
-                                +91 00000 00000
-
-                            </a>
-
-                        </li>
-
-
-                    </ul>
-
-
-                </div>
-
-
-            </div>
-
-
-
-            <div class="footer-bottom">
-
-
-                <div>
-
-                    © 2026 NM Technologies.
-                    All rights reserved.
-
-                </div>
-
-
-                <div>
-
-                    Odoo · WhatsApp API · Automation
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-    </footer>
-
-
-
-    <!-- ==================================================
-         BOOTSTRAP JS
-    ================================================== -->
-
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </script>
-
-
-
-    <!-- ==================================================
-         AOS JS
-    ================================================== -->
-
-    <script
-        src="https://unpkg.com/aos@2.3.4/dist/aos.js">
-    </script>
-
-
-
-    <!-- ==================================================
-         CUSTOM JAVASCRIPT
-    ================================================== -->
-
-    <script>
-
-
-        /* ==========================================
-           AOS
-        ========================================== */
-
-        AOS.init({
-
-            duration: 800,
-
-            once: true,
-
-            offset: 80
-
-        });
-
-
-
-        /* ==========================================
-           NAVBAR SCROLL
-        ========================================== */
-
-        const navbar =
-            document.querySelector('.navbar');
-
-
-        window.addEventListener('scroll', function () {
-
-
-            if (window.scrollY > 50) {
-
-                navbar.classList.add('scrolled');
-
-            }
-
-            else {
-
-                navbar.classList.remove('scrolled');
-
-            }
-
-
-        });
-
-
-
-        /* ==========================================
-           MOBILE NAVIGATION
-        ========================================== */
-
-        const navLinks =
-            document.querySelectorAll(
-                '.navbar-nav .nav-link'
-            );
-
-
-        const navbarCollapse =
-            document.querySelector(
-                '.navbar-collapse'
-            );
-
-
-        navLinks.forEach(function (link) {
-
-
-            link.addEventListener(
-                'click',
-                function () {
-
-
-                    if (
-
-                        window.innerWidth < 992 &&
-
-                        navbarCollapse.classList.contains(
-                            'show'
-                        )
-
-                    ) {
-
-
-                        const bsCollapse =
-                            bootstrap.Collapse.getInstance(
-                                navbarCollapse
-                            );
-
-
-                        if (bsCollapse) {
-
-                            bsCollapse.hide();
-
-                        }
-
-
-                    }
-
-
-                }
-            );
-
-
-        });
-
-
-
-        /* ==========================================
-           HERO ORB PARALLAX
-        ========================================== */
-
-        const orb =
-            document.querySelector('.hero-orb');
-
-
-        document.addEventListener(
-            'mousemove',
-            function (event) {
-
-
-                if (!orb) return;
-
-
-                const x =
-                    (
-                        event.clientX /
-                        window.innerWidth -
-                        0.5
-                    ) * 25;
-
-
-                const y =
-                    (
-                        event.clientY /
-                        window.innerHeight -
-                        0.5
-                    ) * 25;
-
-
-                orb.style.transform =
-                    `translate(${x}px, ${y}px)`;
-
-
-            }
-        );
-
-
-    </script>
-
+</script>
 
 </body>
-
 </html>
-```
